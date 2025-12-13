@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iker Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body
+    class="bg-black min-h-screen w-full relative overflow-x-hidden text-white"
+  >
+    <div
+      class="fixed inset-0 w-full h-full pointer-events-none -z-10 overflow-hidden"
+    >
+      <div
+        class="absolute -top-20 -left-20 w-96 h-96 rounded-full bg-orange-400 mix-blend-screen filter blur-[120px] opacity-40"
+      ></div>
+      <div
+        class="absolute top-0 left-0 w-80 h-80 rounded-full bg-yellow-400 mix-blend-screen filter blur-[128px] opacity-40 animate-pulse"
+      ></div>
+      <div
+        class="absolute top-10 left-10 w-60 h-60 rounded-full bg-white mix-blend-overlay filter blur-[90px] opacity-20"
+      ></div>
+
+      <div
+        class="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-blue-700 mix-blend-screen filter blur-[120px] opacity-40"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-green-200 mix-blend-screen filter blur-[128px] opacity-40 animate-pulse"
+      ></div>
+    </div>
+
+    <header
+      class="flex justify-between items-center p-6 w-full sticky z-50 top-0 backdrop-blur-md bg-black/50"
+    >
+      <audio id="Music" loop>
+        <source src="./Assets/clic.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+
+      <button
+        id="Music_button"
+        class="sticky right-4 z-50 w-8 h-8 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/40 hover:scale-110 transition-all shadow-lg group"
+      >
+        <img id="icon_song" src="./images/song.svg" />
+      </button>
+
+      <script src="./Javascript/audio.js"></script>
+
+      <div class="flex gap-4">
+        <a
+          href="#contacts_tittle"
+          class="cursor-pointer text-white font-bold px-3 py-1 hover:scale-110 hover:w-full rounded-sm hover:bg-blue-400 hover:backdrop-blur-md transition-all duration-300"
+        >
+          Contact
+        </a>
+        <a
+          href="#projects_tittle"
+          class="cursor-pointer text-white font-bold px-3 py-1 hover:scale-110 rounded-sm hover:bg-orange-500 transition-all duration-300"
+        >
+          Projects
+        </a>
+      </div>
+    </header>
+
+    <main class="flex flex-col items-center w-full px-4">
+      <section
+        id="presentation"
+        class="flex flex-col justify-center items-center w-full min-h-[60vh] text-center max-w-4xl mx-auto"
+      >
+        <h2 class="text-xl font-bold mb-2">My name is...</h2>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+          IKER CORDERO
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 max-w-2xl">
+          I'm a business administration student, and this is my first portfolio
+          as a web developer because, yes, I also enjoy developing things...
+        </p>
+      </section>
+
+      <section id="projects_tittle" class="w-full max-w-4xl mt-10 mb-6">
+        <h1 class="font-bold text-4xl text-left border-b border-gray-700 pb-2">
+          Projects
+        </h1>
+      </section>
+
+      <section
+        id="projects"
+        class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mb-20"
+      >
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-xl p-6 hover:bg-white/15 transition duration-300"
+        >
+          <img class="flex" src="./images/yt.png" />
+          <h1
+            class="flex text-xl text-transparent bg-gradient-to-t from-orange-500 to-orange-700 bg-clip-text font-extrabold"
+          >
+            YOUTUBE
+          </h1>
+          <p class="text-gray-200">
+            Creating a YouTube feed using HTML and CSS, adding mobile
+            responsiveness
+          </p>
+        </div>
+
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-xl p-6 hover:bg-white/15 transition duration-300 min-h-[150px]"
+        >
+          <img src="./images/project_ig.png" />
+          <h1
+            class="flex text-xl font-extrabold bg-gradient-to-t from-sky-700 to-sky-500 text-transparent bg-clip-text"
+          >
+            INSTAGRAM feed
+          </h1>
+          <p class="text-gray-200">
+            Creating a Instagram profile feed using HTML and SAAS, adding mobile
+            responsiveness too.
+          </p>
+        </div>
+      </section>
+
+      <section id="contacts_tittle" class="w-full max-w-4xl mt-10 mb-6">
+        <h1 class="font-bold text-4xl text-left border-b border-gray-700 pb-2">
+          Contacts
+        </h1>
+      </section>
+
+      <section
+        id="Contacts"
+        class="flex justify-start items-start w-full min-h-screen"
+      >
+        <div
+          class="grid md:grid-cols-3 gap-4 w-full h-120 px-4 mb-20 border-gray-700"
+        >
+          <div
+            id="GMAIL"
+            class="group relative overflow-hidden rounded-lg p-4 flex flex-col items-center justify-between transition-all hover:scale-105 cursor-pointer bg-white/10 backdrop-blur-md border border-white/20 shadow-lg"
+          >
+            <div
+              class="absolute inset-0 bg-cover bg-center transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 blur-sm brightness-50 bg-[url('https://cdn.dribbble.com/userupload/40445321/file/original-8c4b02648addd206a1163ffe92295782.png')]"
+            ></div>
+
+            <div
+              class="relative z-10 flex flex-col items-center justify-between w-full h-full"
+            >
+              <div class="flex justify-center items-center">
+                <img
+                  class="w-18 h-18 gap-4 p-2"
+                  src="./images/mail.svg"
+                  alt="IG Logo"
+                />
+
+                <h1
+                  class="flex justify-center items-center text-white text-4xl md:text-3xl font-bold drop-shadow-md"
+                >
+                  GMAIL
+                </h1>
+              </div>
+
+              <p
+                class="flex font-extrasans md:text-xl space-nowrap p-4 text-white mt-2"
+              >
+                CORDEROIKER9@GMAIL.COM
+              </p>
+            </div>
+          </div>
+
+          <div
+            id="IG"
+            class="group relative overflow-hidden rounded-lg p-4 flex flex-col items-center justify-between transition-all hover:scale-105 cursor-pointer bg-white/10 backdrop-blur-md border border-white/20 shadow-lg"
+          >
+            <div
+              class="absolute inset-0 bg-cover bg-center transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 blur-sm brightness-50 bg-[url('https://cdn.pixabay.com/photo/2021/10/24/21/23/instagram-6739333_640.jpg')]"
+            ></div>
+
+            <div
+              class="relative z-10 flex flex-col items-center justify-between w-full h-full"
+            >
+              <div class="flex justify-center items-center">
+                <img
+                  class="w-18 h-18 gap-4 p-2"
+                  src="./images/ig.svg"
+                  alt="IG Logo"
+                />
+
+                <h1
+                  class="flex justify-center items-center text-white text-4xl md:text-3xl font-bold drop-shadow-md"
+                >
+                  INSTAGRAM
+                </h1>
+              </div>
+
+              <a
+                href="https://www.instagram.com/iker.britto?igsh=MTVqb3QzY2Q5bXE2&utm_source=qr"
+                class="flex group flex-col justify-center items-center text-2xl text-white mt-2"
+              >
+                @IKER.BRITTO
+                <p
+                  class="overflow-hidden text-white text-sm group-hover:opacity-100 opacity-0"
+                >
+                  Haz click aquí para ir a mi Instagram!
+                </p>
+              </a>
+            </div>
+          </div>
+
+          <div
+            id="GITHUB"
+            class="group relative overflow-hidden rounded-lg p-4 flex flex-col items-center justify-between transition-all hover:scale-105 cursor-pointer bg-white/10 backdrop-blur-md border border-white/20 shadow-lg"
+          >
+            <div
+              class="absolute inset-0 bg-cover bg-center transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 blur-sm brightness-50 bg-[url('https://t3.ftcdn.net/jpg/09/18/17/82/360_F_918178253_SwcTm5ohwFDeRhZBNlMkYv4vQh6JbLZs.jpg')]"
+            ></div>
+
+            <div
+              class="relative z-10 flex flex-col items-center justify-between w-full h-full"
+            >
+              <div class="flex justify-center items-center">
+                <img
+                  class="w-18 h-18 gap-4 p-2"
+                  src="./images/github.svg"
+                  alt="IG Logo"
+                />
+
+                <h1
+                  class="flex justify-center items-center text-white text-4xl md:text-3xl font-bold drop-shadow-md"
+                >
+                  GITHUB
+                </h1>
+              </div>
+
+              <a
+                href="https://github.com/Ikercordero1"
+                class="flex flex-col group justify-center items-center text-2xl text-white mt-2"
+              >
+                IKERCORDERO1
+                <p
+                  class="overflow-hidden opacity-0 group-hover:opacity-100 cursor-pointer text-sm"
+                >
+                  Haz click aquí para ir a mi Github!
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
