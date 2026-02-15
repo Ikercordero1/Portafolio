@@ -1,10 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iker Portfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
   </head>
 
   <body
@@ -14,152 +20,261 @@
       class="fixed inset-0 w-full h-full pointer-events-none -z-10 overflow-hidden"
     >
       <div
-        class="absolute -top-20 -left-20 w-96 h-96 rounded-full bg-orange-400 mix-blend-screen filter blur-[120px] opacity-40"
+        class="absolute -top-20 -left-20 w-64 h-64 md:w-96 md:h-96 rounded-full bg-orange-400 mix-blend-screen filter blur-[120px] opacity-40"
       ></div>
       <div
-        class="absolute top-0 left-0 w-80 h-80 rounded-full bg-yellow-400 mix-blend-screen filter blur-[128px] opacity-40 animate-pulse"
+        class="absolute top-0 left-0 w-60 h-60 md:w-80 md:h-80 rounded-full bg-yellow-400 mix-blend-screen filter blur-[128px] opacity-40 animate-pulse"
       ></div>
       <div
-        class="absolute top-10 left-10 w-60 h-60 rounded-full bg-white mix-blend-overlay filter blur-[90px] opacity-20"
+        class="absolute top-10 left-10 w-40 h-40 md:w-60 md:h-60 rounded-full bg-white mix-blend-overlay filter blur-[90px] opacity-20"
       ></div>
 
       <div
-        class="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-blue-700 mix-blend-screen filter blur-[120px] opacity-40"
+        class="absolute -bottom-20 -right-20 w-64 h-64 md:w-96 md:h-96 rounded-full bg-blue-700 mix-blend-screen filter blur-[120px] opacity-40"
       ></div>
       <div
-        class="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-green-200 mix-blend-screen filter blur-[128px] opacity-40 animate-pulse"
+        class="absolute bottom-0 right-0 w-60 h-60 md:w-80 md:h-80 rounded-full bg-green-200 mix-blend-screen filter blur-[128px] opacity-40 animate-pulse"
       ></div>
     </div>
 
     <header
-      class="flex justify-between items-center p-6 w-full sticky z-50 top-0 backdrop-blur-md bg-black/50"
+      class="flex justify-between items-center p-4 md:p-6 w-full sticky z-50 top-0 backdrop-blur-md bg-black/50"
     >
       <audio id="Music" loop>
         <source src="./Assets/clic.mp3" type="audio/mpeg" />
-        Tu navegador no soporta el elemento de audio.
+       
       </audio>
-
-      <button
-        id="Music_button"
-        class="sticky right-4 z-50 w-8 h-8 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/40 hover:scale-110 transition-all shadow-lg group"
-      >
-        <img id="icon_song" src="./images/song.svg" />
-      </button>
+<button
+  id="Music_button"
+  class="sticky right-4 z-50 w-8 h-8 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/40 hover:scale-110 transition-all shadow-lg group"
+>
+<img id="icon_off" src="./images/offsound.svg" alt="Music Off" class="hidden w-5 h-5" />
+  <img id="icon_song" src="./images/song.svg" alt="Music On" class="block w-5 h-5" />
+  
+  
+</button>
+      
 
       <script src="./Javascript/audio.js"></script>
 
-      <div class="flex gap-4">
+      <div class="flex gap-2 md:gap-4 text-sm md:text-base">
         <a
           href="#contacts_tittle"
-          class="cursor-pointer text-white font-bold px-3 py-1 hover:scale-110 hover:w-full rounded-sm hover:bg-blue-400 hover:backdrop-blur-md transition-all duration-300"
+          class="cursor-pointer text-white font-bold px-2 md:px-3 py-1 hover:scale-110 rounded-sm hover:bg-blue-400 hover:backdrop-blur-md transition-all duration-300"
         >
           Contact
         </a>
         <a
           href="#projects_tittle"
-          class="cursor-pointer text-white font-bold px-3 py-1 hover:scale-110 rounded-sm hover:bg-orange-500 transition-all duration-300"
+          class="cursor-pointer text-white font-bold px-2 md:px-3 py-1 hover:scale-110 rounded-sm hover:bg-orange-500 transition-all duration-300"
         >
           Projects
         </a>
       </div>
     </header>
 
-    <main class="flex flex-col items-center w-full px-4">
+    <main class="flex flex-col items-center w-full px-4 md:px-0">
       <section
         id="presentation"
-        class="flex flex-col justify-center items-center w-full min-h-[60vh] text-center max-w-4xl mx-auto"
+        class="flex flex-col justify-center items-center w-full min-h-[50vh] md:min-h-[60vh] text-center max-w-4xl mx-auto pt-10"
       >
-        <h2 class="text-xl font-bold mb-2">My name is...</h2>
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+        <h2 class="text-lg md:text-xl font-bold mb-2">My name is...</h2>
+        <h1 class="text-4xl md:text-7xl font-extrabold mb-6 tracking-tight">
           IKER CORDERO
         </h1>
-        <p class="text-lg md:text-xl text-gray-300 max-w-2xl">
+        <p class="text-base md:text-xl text-gray-300 max-w-xs md:max-w-2xl">
           I'm a business administration student, and this is my first portfolio
           as a web developer because, yes, I also enjoy developing things...
         </p>
       </section>
 
-      <section id="projects_tittle" class="w-full max-w-4xl mt-10 mb-6">
-        <h1 class="font-bold text-4xl text-left border-b border-gray-700 pb-2">
+      <section
+        id="projects_tittle"
+        class="w-full max-w-4xl mt-10 mb-6 px-4 md:px-0"
+      >
+        <h1
+          class="font-bold text-3xl md:text-4xl text-left border-b border-gray-700 pb-2"
+        >
           Projects
         </h1>
       </section>
 
       <section
         id="projects"
-        class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mb-20"
+        class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mb-20 px-4 md:px-0"
       >
-        <div
-          class="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-xl p-6 hover:bg-white/15 transition duration-300"
+        <a
+          href="https://ikercordero1.github.io/Youtube-simulation/"
+          class="block h-full"
         >
-          <img class="flex" src="./images/yt.png" />
-          <h1
-            class="flex text-xl text-transparent bg-gradient-to-t from-orange-500 to-orange-700 bg-clip-text font-extrabold"
+          <div
+            class="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-xl p-6 hover:bg-white/15 transition duration-300 h-full"
           >
-            YOUTUBE
-          </h1>
-          <p class="text-gray-200">
-            Creating a YouTube feed using HTML and CSS, adding mobile
-            responsiveness
-          </p>
-        </div>
+            <img
+              class="flex w-full rounded-md mb-4"
+              src="./images/yt.png"
+              alt="Youtube Project"
+            />
+            <h1
+              class="flex text-xl text-transparent bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text font-extrabold"
+            >
+              YOUTUBE
+            </h1>
+            <p class="text-gray-200 mt-2 text-sm md:text-base">
+              Creating a YouTube feed using HTML and CSS, adding mobile
+              responsiveness
+            </p>
+          </div>
+        </a>
 
         <div
           class="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-xl p-6 hover:bg-white/15 transition duration-300 min-h-[150px]"
         >
-          <img src="./images/project_ig.png" />
-          <h1
-            class="flex text-xl font-extrabold bg-gradient-to-t from-sky-700 to-sky-500 text-transparent bg-clip-text"
+          <a
+            href="https://ikercordero1.github.io/Javascript_Game-/"
+            class="block h-full"
           >
-            INSTAGRAM feed
-          </h1>
-          <p class="text-gray-200">
-            Creating a Instagram profile feed using HTML and SAAS, adding mobile
-            responsiveness too.
-          </p>
+            <img
+              src="./images/console js game.png"
+              class="w-full rounded-md mb-4"
+              alt="Game Project"
+            />
+            <h1
+              class="flex text-xl font-extrabold bg-gradient-to-r from-yellow-700 to-lime-300 text-transparent bg-clip-text"
+            >
+              JavaScript console game
+            </h1>
+            <p class="text-gray-200 mt-2 text-sm md:text-base">
+              Creating a JavaScript game in browser console, two teams battle
+              each other until one of them wins...
+            </p>
+          </a>
+        </div>
+
+        <div
+          class="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-xl p-6 hover:bg-white/15 transition duration-300 min-h-[150px] md:col-span-2"
+        >
+          <a
+            href="https://ikercordero1.github.io/Project-JS/"
+            class="block h-full"
+          >
+            <img
+              src="./images/admin dashboard.png"
+              class="w-full rounded-md mb-4"
+              alt="Dashboard Project"
+            />
+            <h1
+              class="flex text-xl font-extrabold bg-gradient-to-r from-green-500 to-sky-500 text-transparent bg-clip-text"
+            >
+              Admin dashboard
+            </h1>
+            <p class="text-gray-200 mt-2 text-sm md:text-base">
+              Create a user administration panel through which you will need to
+              log in with a registered user.
+            </p>
+          </a>
         </div>
       </section>
 
-      <section id="contacts_tittle" class="w-full max-w-4xl mt-10 mb-6">
-        <h1 class="font-bold text-4xl text-left border-b border-gray-700 pb-2">
-          Contacts
+      <section
+        id="tools_tittle"
+        class="w-full max-w-4xl mt-10 mb-6 px-4 md:px-0"
+      >
+        <h1
+          class="font-bold text-3xl md:text-4xl text-left border-b border-gray-700 pb-2"
+        >
+          Tools i use
         </h1>
       </section>
 
       <section
-        id="Contacts"
-        class="flex justify-start items-start w-full min-h-screen"
+        class="flex w-full max-w-4xl justify-center items-center mb-20 px-4 md:px-0"
       >
         <div
-          class="grid md:grid-cols-3 gap-4 w-full h-120 px-4 mb-20 border-gray-700"
+          class="w-full bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-xl p-4 md:p-6 hover:bg-white/15 transition duration-300"
+        >
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 p-2 gap-4 md:gap-6 text-center"
+          >
+            <div class="flex items-center justify-center w-full">
+              <li class="list-none font-extrabold text-xl md:text-3xl">HTML</li>
+            </div>
+            <div class="flex items-center justify-center w-full">
+              <li class="list-none font-extrabold text-xl md:text-3xl">
+                TAILWIND
+              </li>
+            </div>
+            <div class="flex items-center justify-center w-full">
+              <li class="list-none font-extrabold text-xl md:text-3xl">SAAS</li>
+            </div>
+            <div class="flex items-center justify-center w-full">
+              <li class="list-none font-extrabold text-lg md:text-3xl">
+                FRAMEWORKS
+              </li>
+            </div>
+            <div class="flex items-center justify-center w-full">
+              <li class="list-none font-extrabold text-xl md:text-3xl">CSS</li>
+            </div>
+            <div class="flex items-center justify-center w-full">
+              <li class="list-none font-extrabold text-lg md:text-3xl">
+                BOOTSTRAP
+              </li>
+            </div>
+            <div class="flex items-center justify-center w-full">
+              <li class="list-none font-extrabold text-lg md:text-3xl">
+                Javascript
+              </li>
+            </div>
+            <div class="flex items-center justify-center w-full">
+              <li class="list-none font-extrabold text-lg md:text-3xl">
+                Wordpress
+              </li>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contacts_tittle"
+        class="w-full max-w-4xl mt-10 mb-6 px-4 md:px-0"
+      >
+        <h1
+          class="font-bold text-3xl md:text-4xl text-left border-b border-gray-700 pb-2"
+        >
+          Contacts
+        </h1>
+      </section>
+
+      <section id="Contacts" class="flex justify-start items-start w-full">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full h-auto px-4 mb-20 md:max-w-4xl mx-auto"
         >
           <div
             id="GMAIL"
-            class="group relative overflow-hidden rounded-lg p-4 flex flex-col items-center justify-between transition-all hover:scale-105 cursor-pointer bg-white/10 backdrop-blur-md border border-white/20 shadow-lg"
+            class="group relative overflow-hidden rounded-lg p-4 flex flex-col items-center justify-between transition-all hover:scale-105 cursor-pointer bg-white/10 backdrop-blur-md border border-white/20 shadow-lg min-h-[250px]"
           >
             <div
               class="absolute inset-0 bg-cover bg-center transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 blur-sm brightness-50 bg-[url('https://cdn.dribbble.com/userupload/40445321/file/original-8c4b02648addd206a1163ffe92295782.png')]"
             ></div>
 
             <div
-              class="relative z-10 flex flex-col items-center justify-between w-full h-full"
+              class="relative z-10 flex flex-col items-center justify-center h-full w-full gap-4"
             >
-              <div class="flex justify-center items-center">
+              <div class="flex flex-col justify-center items-center">
                 <img
-                  class="w-18 h-18 gap-4 p-2"
+                  class="w-12 h-12 md:w-18 md:h-18 mb-2"
                   src="./images/mail.svg"
-                  alt="IG Logo"
+                  alt="Gmail Logo"
                 />
-
                 <h1
-                  class="flex justify-center items-center text-white text-4xl md:text-3xl font-bold drop-shadow-md"
+                  class="text-white text-2xl md:text-3xl font-bold drop-shadow-md"
                 >
                   GMAIL
                 </h1>
               </div>
 
               <p
-                class="flex font-extrasans md:text-xl space-nowrap p-4 text-white mt-2"
+                class="text-white text-sm md:text-lg mt-2 font-bold break-all text-center"
               >
                 CORDEROIKER9@GMAIL.COM
               </p>
@@ -168,24 +283,23 @@
 
           <div
             id="IG"
-            class="group relative overflow-hidden rounded-lg p-4 flex flex-col items-center justify-between transition-all hover:scale-105 cursor-pointer bg-white/10 backdrop-blur-md border border-white/20 shadow-lg"
+            class="group relative overflow-hidden rounded-lg p-4 flex flex-col items-center justify-between transition-all hover:scale-105 cursor-pointer bg-white/10 backdrop-blur-md border border-white/20 shadow-lg min-h-[250px]"
           >
             <div
               class="absolute inset-0 bg-cover bg-center transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 blur-sm brightness-50 bg-[url('https://cdn.pixabay.com/photo/2021/10/24/21/23/instagram-6739333_640.jpg')]"
             ></div>
 
             <div
-              class="relative z-10 flex flex-col items-center justify-between w-full h-full"
+              class="relative z-10 flex flex-col items-center justify-center h-full w-full gap-4"
             >
-              <div class="flex justify-center items-center">
+              <div class="flex flex-col justify-center items-center">
                 <img
-                  class="w-18 h-18 gap-4 p-2"
+                  class="w-12 h-12 md:w-18 md:h-18 mb-2"
                   src="./images/ig.svg"
                   alt="IG Logo"
                 />
-
                 <h1
-                  class="flex justify-center items-center text-white text-4xl md:text-3xl font-bold drop-shadow-md"
+                  class="text-white text-2xl md:text-3xl font-bold drop-shadow-md"
                 >
                   INSTAGRAM
                 </h1>
@@ -193,11 +307,11 @@
 
               <a
                 href="https://www.instagram.com/iker.britto?igsh=MTVqb3QzY2Q5bXE2&utm_source=qr"
-                class="flex group flex-col justify-center items-center text-2xl text-white mt-2"
+                class="flex group flex-col justify-center items-center text-xl md:text-2xl text-white mt-2 text-center"
               >
                 @IKER.BRITTO
                 <p
-                  class="overflow-hidden text-white text-sm group-hover:opacity-100 opacity-0"
+                  class="overflow-hidden text-white text-xs md:text-sm group-hover:opacity-100 opacity-100 md:opacity-0 mt-2"
                 >
                   Haz click aquí para ir a mi Instagram!
                 </p>
@@ -207,24 +321,23 @@
 
           <div
             id="GITHUB"
-            class="group relative overflow-hidden rounded-lg p-4 flex flex-col items-center justify-between transition-all hover:scale-105 cursor-pointer bg-white/10 backdrop-blur-md border border-white/20 shadow-lg"
+            class="group relative overflow-hidden rounded-lg p-4 flex flex-col items-center justify-between transition-all hover:scale-105 cursor-pointer bg-white/10 backdrop-blur-md border border-white/20 shadow-lg min-h-[250px]"
           >
             <div
               class="absolute inset-0 bg-cover bg-center transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 blur-sm brightness-50 bg-[url('https://t3.ftcdn.net/jpg/09/18/17/82/360_F_918178253_SwcTm5ohwFDeRhZBNlMkYv4vQh6JbLZs.jpg')]"
             ></div>
 
             <div
-              class="relative z-10 flex flex-col items-center justify-between w-full h-full"
+              class="relative z-10 flex flex-col items-center justify-center h-full w-full gap-4"
             >
-              <div class="flex justify-center items-center">
+              <div class="flex flex-col justify-center items-center">
                 <img
-                  class="w-18 h-18 gap-4 p-2"
+                  class="w-12 h-12 md:w-18 md:h-18 mb-2"
                   src="./images/github.svg"
-                  alt="IG Logo"
+                  alt="Github Logo"
                 />
-
                 <h1
-                  class="flex justify-center items-center text-white text-4xl md:text-3xl font-bold drop-shadow-md"
+                  class="text-white text-2xl md:text-3xl font-bold drop-shadow-md"
                 >
                   GITHUB
                 </h1>
@@ -232,13 +345,51 @@
 
               <a
                 href="https://github.com/Ikercordero1"
-                class="flex flex-col group justify-center items-center text-2xl text-white mt-2"
+                class="flex flex-col group justify-center items-center text-xl md:text-2xl text-white mt-2 text-center"
               >
                 IKERCORDERO1
                 <p
-                  class="overflow-hidden opacity-0 group-hover:opacity-100 cursor-pointer text-sm"
+                  class="overflow-hidden opacity-100 md:opacity-0 group-hover:opacity-100 cursor-pointer text-xs md:text-sm mt-2"
                 >
                   Haz click aquí para ir a mi Github!
+                </p>
+              </a>
+            </div>
+          </div>
+
+          <div
+            id="Linkdn"
+            class="group relative overflow-hidden rounded-lg p-4 flex flex-col items-center justify-between transition-all hover:scale-105 cursor-pointer bg-white/10 backdrop-blur-md border border-white/20 shadow-lg min-h-[250px]"
+          >
+            <div
+              class="absolute inset-0 bg-cover bg-center transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 blur-sm brightness-50 bg-[url('https://cdn.iconscout.com/icon/free/png-256/free-linkedin-logo-icon-svg-download-png-2641591.png?f=webp')]"
+            ></div>
+
+            <div
+              class="relative z-10 flex flex-col items-center justify-center h-full w-full gap-4"
+            >
+              <div class="flex flex-col justify-center items-center">
+                <img
+                  class="w-12 h-12 md:w-18 md:h-18 mb-2"
+                  src="./images/linkdn.svg"
+                  alt="Linkdn Logo"
+                />
+                <h1
+                  class="text-white text-2xl md:text-3xl font-bold drop-shadow-md"
+                >
+                  LINKEDIN
+                </h1>
+              </div>
+
+              <a
+                href="https://www.linkedin.com/in/iker-cordero2004/"
+                class="flex flex-col group justify-center items-center text-xl md:text-2xl text-white mt-2 text-center"
+              >
+                IKER CORDERO
+                <p
+                  class="overflow-hidden opacity-100 md:opacity-0 group-hover:opacity-100 cursor-pointer text-xs md:text-sm mt-2"
+                >
+                  Haz click aquí!
                 </p>
               </a>
             </div>
